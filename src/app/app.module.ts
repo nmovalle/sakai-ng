@@ -1,33 +1,50 @@
 import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy, PathLocationStrategy } from '@angular/common';
+
+//components
 import { AppComponent } from './app.component';
+import { NotfoundComponent } from './shared/notfound/notfound.component';
+import { LoginComponent } from './pages/login/login.component';
+
+//modules
 import { AppRoutingModule } from './app-routing.module';
 import { AppLayoutModule } from './layout/app.layout.module';
-import { NotfoundComponent } from './demo/components/notfound/notfound.component';
-import { ProductService } from './demo/service/product.service';
-import { CountryService } from './demo/service/country.service';
-import { CustomerService } from './demo/service/customer.service';
-import { EventService } from './demo/service/event.service';
-import { IconService } from './demo/service/icon.service';
-import { NodeService } from './demo/service/node.service';
-import { PhotoService } from './demo/service/photo.service';
-import { HttpClientModule } from '@angular/common/http';
-import { PrimengModule } from './core/modules/primeng.module';
+import { ProductService } from './core/service/product.service';
+
+//services
+import { CountryService } from './core/service/country.service';
+import { CustomerService } from './core/service/customer.service';
+import { EventService } from './core/service/event.service';
+import { IconService } from './core/service/icon.service';
+import { NodeService } from './core/service/node.service';
+import { PhotoService } from './core/service/photo.service';
+import { MessageService } from 'primeng/api';
 import { OAuthModule } from 'angular-oauth2-oidc';
+import { PrimengModule } from './core/modules/primeng.module';
 
 @NgModule({
-    declarations: [AppComponent, NotfoundComponent],
+    declarations: [
+        AppComponent, 
+        NotfoundComponent, 
+        LoginComponent
+    ],
     imports: [
         AppRoutingModule, 
-        AppLayoutModule, 
-        PrimengModule, 
-        HttpClientModule, 
+        AppLayoutModule,
+        PrimengModule,
         OAuthModule.forRoot()
     ],
     providers: [
         { provide: LocationStrategy, useClass: PathLocationStrategy },
-        CountryService, CustomerService, EventService, IconService, NodeService,
-        PhotoService, ProductService
+        CountryService, 
+        CustomerService, 
+        EventService, 
+        IconService, 
+        NodeService,
+        PhotoService, 
+        ProductService,
+        MessageService,
+        
     ],
     bootstrap: [AppComponent],
 })

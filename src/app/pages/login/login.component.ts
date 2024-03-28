@@ -1,21 +1,16 @@
 import { Component } from '@angular/core';
-import { MessageService } from 'primeng/api'
-import { LoginService } from './services/login.service';
-import { GoogleApiService, UserInfo } from './services/google-api.service';
+import { MessageService } from 'primeng/api';
+import { GoogleApiService } from './services/google-api.service';
+import { UserInfo } from './user-info';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  valCheck: string[] = ['remember'];
-  password!: string;
   userInfo?: UserInfo;
 
-
   constructor(
-    private loginService: LoginService,
     private messageService: MessageService,
     private readonly googleApi: GoogleApiService
   ) {
@@ -32,9 +27,5 @@ export class LoginComponent {
 
   isLoggedIn(): boolean {
     return this.googleApi.isLoggedIn();
-  }
-
-  logout() {
-    this.googleApi.signOut();
   }
 }

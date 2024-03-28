@@ -28,6 +28,9 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { MenubarModule } from 'primeng/menubar'
 import { PanelMenuModule } from 'primeng/panelmenu';
+import { SidebarModule } from 'primeng/sidebar';
+import { BadgeModule } from 'primeng/badge';
+import { RippleModule } from 'primeng/ripple';
 
 @NgModule({
   declarations: [],
@@ -55,7 +58,10 @@ import { PanelMenuModule } from 'primeng/panelmenu';
     ProgressSpinnerModule,
     SplitButtonModule,
     MenubarModule,
-    PanelMenuModule
+    PanelMenuModule,
+    SidebarModule,
+    BadgeModule,
+    RippleModule
   ],
 
   exports: [
@@ -83,7 +89,10 @@ import { PanelMenuModule } from 'primeng/panelmenu';
     SplitButtonModule,
     MenubarModule,
     MessageModule,
-    PanelMenuModule
+    PanelMenuModule,
+    SidebarModule,
+    BadgeModule,
+    RippleModule
   ],
 
   providers: [ConfirmationService, MessageService]
