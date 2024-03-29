@@ -11,7 +11,7 @@ import { LoginComponent } from './pages/login/login.component';
                 path: '', component: AppLayoutComponent,
                 children: [
                     { path: '', loadChildren: () => import('./shared/dashboard/dashboard.module').then(m => m.DashboardModule) },
-                    { path: 'clients', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
+                    { path: 'clients', loadChildren: () => import('./pages/clientes/clients.module').then(m => m.ClientsModule) },
                 ]
             },
             { path: 'auth', loadChildren: () => import('./demo/components/auth/auth.module').then(m => m.AuthModule) },

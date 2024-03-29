@@ -44,7 +44,6 @@ import { PrimengModule } from './core/modules/primeng.module';
         PhotoService, 
         ProductService,
         MessageService,
-        
     ],
     bootstrap: [AppComponent],
 })

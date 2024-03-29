@@ -21,19 +21,33 @@ export class AppMenuComponent implements OnInit {
                 ]
             },
             {
-                label: 'Clients',
+                label: 'Employeers',
                 items: [
-                    { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
-                    { label: 'Input', icon: 'pi pi-fw pi-check-square', routerLink: ['/uikit/input'] },
-                    { label: 'Float Label', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/floatlabel'] },
-                    { label: 'Menu', icon: 'pi pi-fw pi-bars', routerLink: ['/uikit/menu'], routerLinkActiveOptions: { paths: 'subset', queryParams: 'ignored', matrixParams: 'ignored', fragment: 'ignored' } },
+                    { label: 'Clents', icon: 'pi pi-fw pi-id-card', routerLink: ['/employeers'] },
                 ]
             },
             {
-                label: 'Employeers',
+                label: 'Projects',
                 items: [
-                    { label: 'PrimeIcons', icon: 'pi pi-fw pi-prime', routerLink: ['/utilities/icons'] },
-                    { label: 'PrimeFlex', icon: 'pi pi-fw pi-desktop', url: ['https://www.primefaces.org/primeflex/'], target: '_blank' },
+                    { label: 'Projects', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
+                    { label: 'Projects Skills', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
+                ]
+            },
+            {
+                label: 'Skills',
+                items: [
+                    { label: 'Skills', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
+                ]
+            },
+            {
+                label: 'Employees',
+                items: [
+                    { label: 'Engineers', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
+                    { label: 'Engineers Skills', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
+                    { label: 'Engineers Activites', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
+                    { label: 'Engineers Daily Asignment', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
+                    { label: 'Engineers Equipment', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
+                    { label: 'Engineers Rating', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
                 ]
             },
             {
@@ -62,17 +76,6 @@ export class AppMenuComponent implements OnInit {
                     },
                 ]
             },
-            {
-                label: 'Get Started',
-                items: [
-                    {
-                        label: 'Documentation', icon: 'pi pi-fw pi-question', routerLink: ['/documentation']
-                    },
-                    {
-                        label: 'View Source', icon: 'pi pi-fw pi-search', url: ['https://github.com/primefaces/sakai-ng'], target: '_blank'
-                    }
-                ]
-            }
         ];
     }
 }
